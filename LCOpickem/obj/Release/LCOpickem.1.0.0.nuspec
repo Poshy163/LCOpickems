@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>LCOpickem</id>
+    <version>1.0.0</version>
+    <authors>LCOpickem</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/Images/LCO_Logo.png" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\GitHub\LCOpickems-private\LCOpickem\LCOpickem\bin\Release\net6.0-windows\LCOpickem.runtimeconfig.json" target="lib\net6.0-windows7.0\LCOpickem.runtimeconfig.json" />
+    <file src="C:\GitHub\LCOpickems-private\LCOpickem\LCOpickem\bin\Release\net6.0-windows\LCOpickem.dll" target="lib\net6.0-windows7.0\LCOpickem.dll" />
+    <file src="C:\GitHub\LCOpickems-private\LCOpickem\LCOpickem\Images\LCO_Logo.png" target="content\Images\LCO_Logo.png" />
+    <file src="C:\GitHub\LCOpickems-private\LCOpickem\LCOpickem\Images\LCO_Logo.png" target="contentFiles\any\net6.0-windows7.0\Images\LCO_Logo.png" />
+  </files>
+</package>

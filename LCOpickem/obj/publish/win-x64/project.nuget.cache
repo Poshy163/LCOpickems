@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "r83hqOtwK+k5XCcqKkPEGMf6WPJfJVRMAKtYBMZk5RUu2ou/Klmli8JDTDGv+7ISS2w7+gCVSVggUtB/gK8Q8Q==",
+  "success": true,
+  "projectFilePath": "C:\\GitHub\\LCOpickems-private\\LCOpickem\\LCOpickem\\LCOpickem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\poshe\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.21\\microsoft.netcore.app.runtime.win-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.21\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.21\\microsoft.aspnetcore.app.runtime.win-x64.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}

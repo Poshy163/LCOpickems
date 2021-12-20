@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>False</UseWindowsForms>
+    <ApplicationIcon>Images\LCO_Logo.ico</ApplicationIcon>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Dosis.ttf" />
+    <None Remove="Images\LCO_Logo.png" />
+    <None Remove="Images\LCO_Logo_Full.png" />
+    <None Remove="Images\Teams\CHF.png" />
+    <None Remove="Images\Teams\DW.png" />
+    <None Remove="Images\Teams\GRV.png" />
+    <None Remove="Images\Teams\LGC.png" />
+    <None Remove="Images\Teams\MMM.png" />
+    <None Remove="Images\Teams\ORD.png" />
+    <None Remove="Images\Teams\PCE.png" />
+    <None Remove="Images\Teams\PGG.png" />
+    <None Remove="Images\VSlogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\LCO_Logo.ico" />
+    <Content Include="Images\LCO_Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\VSlogo.png" />
+    <Resource Include="Fonts\Dosis.ttf" />
+    <Resource Include="Images\Teams\ORD.png" />
+    <PackageReference Include="MongoDB.Bson" Version="2.14.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <Resource Include="Images\LCO_Logo_Full.png" />
+    <Resource Include="Images\Teams\CHF.png" />
+    <Resource Include="Images\Teams\DW.png" />
+    <Resource Include="Images\Teams\GRV.png" />
+    <Resource Include="Images\Teams\LGC.png" />
+    <Resource Include="Images\Teams\MMM.png" />
+    <Resource Include="Images\Teams\PCE.png" />
+    <Resource Include="Images\Teams\PGG.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pickems.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

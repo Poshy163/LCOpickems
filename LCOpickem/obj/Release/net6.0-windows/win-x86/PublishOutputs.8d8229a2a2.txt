@@ -1,0 +1,8 @@
+C:\Users\poshe\Desktop\Publist\LCOpickem.pdb
+C:\Users\poshe\Desktop\Publist\Images\LCO_Logo.png
+C:\Users\poshe\Desktop\Publist\D3DCompiler_47_cor3.dll
+C:\Users\poshe\Desktop\Publist\PenImc_cor3.dll
+C:\Users\poshe\Desktop\Publist\PresentationNative_cor3.dll
+C:\Users\poshe\Desktop\Publist\vcruntime140_cor3.dll
+C:\Users\poshe\Desktop\Publist\wpfgfx_cor3.dll
+C:\Users\poshe\Desktop\Publist\LCOpickem.exe

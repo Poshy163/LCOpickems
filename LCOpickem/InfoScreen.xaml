@@ -1,0 +1,573 @@
+﻿<Window x:Class="LCOpickem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LCOpickem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#181735" WindowStartupLocation="CenterScreen"
+        Icon="/Images/LCO_Logo.png" 
+        KeyDown="Window_KeyDown">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="#0f0f2d" Grid.ColumnSpan="2" MouseDown="Grid_MouseDown">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <TextBlock Text="LCO pickem"
+                       Foreground="White" Grid.Column="0" 
+                       HorizontalAlignment="Center" 
+                       FontSize="15"
+                       FontFamily="Fonts/#Dosis"
+                       FontWeight="Bold" VerticalAlignment="Center"/>
+
+            <Button Content="BACK"
+                        Foreground="White"
+                        FontSize="10"
+                        FontWeight="Medium"
+                        Margin="0,0,0,0"
+                        Grid.Column="6"
+                        Grid.ColumnSpan="1"
+                        Click="Back">
+
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="#39385D"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#3a3952"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="75" Height="15"
+                                    CornerRadius="8"
+                                    Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+
+
+
+            <Button Content="X"
+                        Foreground="White"
+                        FontSize="10"
+                        FontWeight="Medium"
+                        Margin="0,0,0,0"
+                    Grid.Column="12"
+                    Grid.ColumnSpan="2"
+                     Click="Exit_Application">
+
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="#FE6584"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF4C70"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="75" Height="15"
+                                    CornerRadius="8"
+                                    Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+
+
+        </Grid>
+
+        <!--Top of info panel-->
+        <StackPanel x:Name="InfoPanel" Grid.Row="1" VerticalAlignment="Center" Margin="60"  Visibility="Visible">
+
+            <StackPanel >
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Image Width="75" Height="75" Source="images/LCO_Logo.png"/>
+                    <TextBlock Text=" LCO pickem" Foreground="White"
+                           FontSize="35"
+                           FontWeight="Medium" 
+                           VerticalAlignment="Center" FontFamily="Fonts/#Dosis"/>
+
+
+                </StackPanel>
+
+                <TextBlock Text="Made For Fans." 
+                       Foreground="White"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="40"
+                           Margin="0,10,0,0"/>
+                <TextBlock Text="By Fans." 
+                       Foreground="White"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="40"
+                           Margin="0,10,0,0"/>
+                <TextBlock Text="Blah blah blah" 
+                       Foreground="White"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                           Margin="0,10,0,0"/>
+
+
+
+
+
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+
+
+                <Button Content="Login"
+                        Foreground="White"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Click="Login"
+                        >
+
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="#FE6584"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+                <Button Content="Register"
+                        Foreground="White"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        Click="Register">
+
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="#39385D"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#3a3952"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+
+
+
+            </StackPanel>
+
+
+
+        </StackPanel>
+        <!--Top of login panel-->
+        <StackPanel x:Name="LoginPanel" Grid.Row="1" VerticalAlignment="Center" Margin="60" Visibility="Hidden">
+
+            <StackPanel >
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Image Width="75" Height="75" Source="images/LCO_Logo.png"/>
+                    <TextBlock Text=" LCO pickem" Foreground="White"
+                            FontSize="35"
+                           FontWeight="Medium" 
+                           VerticalAlignment="Center" FontFamily="Fonts/#Dosis"/>
+
+
+                </StackPanel>
+
+                <TextBlock Text="Username/Email" 
+                       Foreground="White"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="25"
+                           Margin="0,10,0,0"/>
+                <TextBox FontFamily="Fonts/#Dosis" x:Name="UsernameBox"  />
+                <TextBlock Text="Password" 
+                       Foreground="White"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="25"
+                           Margin="0,10,0,0"/>
+                <TextBox FontFamily="Fonts/#Dosis" x:Name="PasswordBox"  />
+
+
+
+
+
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+
+
+                <Button Content="Login"
+                        Foreground="White"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Click="Login_Check"
+                        >
+
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="#FE6584"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+
+
+
+            </StackPanel>
+
+
+
+        </StackPanel>
+        <!--Top of register panel-->
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="60"  x:Name="RegisterPanel" Visibility="Hidden">
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Image Width="75" Height="75" Source="images/LCO_Logo.png"/>
+                    <TextBlock Text=" LCO pickem" Foreground="White"
+                           FontSize="35"
+                           FontWeight="Medium" 
+                           VerticalAlignment="Center" FontFamily="Fonts/#Dosis"/>
+                </StackPanel>
+
+                <TextBlock Text="Username" 
+                       Foreground="White"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="25"
+                           Margin="0,10,0,0"
+                           />
+                <TextBox FontFamily="Fonts/#Dosis" x:Name="RusernameBox" />
+                <TextBlock Text="Email" 
+                       Foreground="White"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="25"
+                           Margin="0,10,0,0"/>
+                <TextBox FontFamily="Fonts/#Dosis" x:Name="RemailBox"/>
+
+
+                <TextBlock Text="Password" 
+                       Foreground="White"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="25"
+                           Margin="0,10,0,0"/>
+                <TextBox FontFamily="Fonts/#Dosis"  x:Name="RpasswordBox" />
+
+
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+
+
+                <Button Content="Register"
+                        Foreground="White"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Click="Register_Check">
+
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="#FE6584"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+
+
+
+            </StackPanel>
+
+
+
+        </StackPanel>
+        <!--Top of glassball panel-->
+        <Canvas x:Name="glassBallPanel" Height="400" Width="600" Background="#18123a"   Visibility="Hidden" 
+                    Panel.ZIndex="1" ClipToBounds="True" Canvas.Left="162" Canvas.Top="58" 
+                 Margin="100,37,0,38" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+
+            <TextBlock Text="Who do you think will win the LCO 2022 spring split?" 
+                       Foreground="White"
+                       FontWeight="Medium"
+                        TextAlignment="Center"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="25" Canvas.Left="2" Canvas.Top="8" Height="35" LineHeight="6" Width="596"/>
+            <!-- Add buttons of teams -->
+            <Button  Name="PGG" Width="100" Height="100" Click="PGGLock" Canvas.Left="25" Canvas.Top="75" Background="Transparent" BorderThickness="0"   >
+                <Image Source="images/teams/PGG.png"/>
+            </Button>
+            <Button Name="DW" Width="100" Height="100" Click="DWLock" Canvas.Left="175" Canvas.Top="75"  Background="Transparent" BorderThickness="0"   >
+                <Image Source="images/teams/DW.png"/>
+            </Button>
+            <Button Name="CHF"  Width="100" Height="100" Click="CHFLock" Canvas.Left="325" Canvas.Top="75"  Background="Transparent" BorderThickness="0"   >
+                <Image Source="images/teams/CHF.png"/>
+            </Button>
+            <Button Name="GRV" Width="100" Height="100" Click="GRVLock" Canvas.Left="475" Canvas.Top="75"  Background="Transparent" BorderThickness="0"  >
+                <Image Source="images/teams/GRV.png"/>
+            </Button>
+
+            <!-- BOTTOM -->
+
+            <Button Name="LGC" Width="100" Height="100" Click="LGCLock" Canvas.Left="25" Canvas.Top="200"   Background="Transparent" BorderThickness="0"  >
+                <Image Source="images/teams/LGC.png"/>
+            </Button>
+            <Button Name="MMM" Width="100" Height="100" Click="MMMLock" Canvas.Left="175" Canvas.Top="200" Background="Transparent" BorderThickness="0"  >
+                <Image Source="images/teams/MMM.png"/>
+            </Button>
+            <Button Name="PCE" Width="100" Height="100" Click="PCELock" Canvas.Left="325" Canvas.Top="200"  Background="Transparent" BorderThickness="0"  >
+                <Image Source="images/teams/PCE.png"/>
+            </Button>
+            <Button Name="ORD" Width="100" Height="100" Click="ORDLock" Canvas.Left="475" Canvas.Top="200"  Background="Transparent" BorderThickness="0"  >
+                <Image Source="images/teams/ORD.png"/>
+            </Button>
+
+            <!-- End of teams -->
+            <Button Content="Lock in!"
+                    x:Name="LockInButton"
+                        Foreground="White"
+                        FontSize="25"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Click="LockIn" Canvas.Top="328" Width="600" Height="70">
+
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="#FE6584"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF4C70"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="200" Height="50"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+
+        </Canvas>
+        
+        
+        <!--Right side art-->
+        <Grid Grid.Column="1" 
+              Grid.RowSpan="2"
+              Margin="160, -365, -610, 85"
+              Panel.ZIndex="-1">
+
+            <Grid.RenderTransform>
+                <RotateTransform Angle="50"/>
+            </Grid.RenderTransform>
+
+            <StackPanel Orientation="Horizontal" Margin="-365, 250, -255, 250">
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3DDDC2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#FC6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3DDDC2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#FC6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+                </StackPanel>
+
+
+
+
+
+
+
+            </StackPanel>
+
+
+
+
+        </Grid>
+    </Grid>
+</Window>

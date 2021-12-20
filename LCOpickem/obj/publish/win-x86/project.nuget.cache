@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "H6qg7wfFYSnecKZrA2W4/tMdgEDEO50Zs8gQjJ6h4jo4Em4/2RKvI43wwoZWnh2kAcBaTsP8nPX8q/MjxL6+3w==",
+  "success": true,
+  "projectFilePath": "C:\\GitHub\\LCOpickems\\LCOpickem\\LCOpickem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\poshe\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\mongodb.bson\\2.13.2\\mongodb.bson.2.13.2.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\mongodb.driver\\2.13.2\\mongodb.driver.2.13.2.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\mongodb.driver.core\\2.13.2\\mongodb.driver.core.2.13.2.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\mongodb.libmongocrypt\\1.2.2\\mongodb.libmongocrypt.1.2.2.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\sharpcompress\\0.23.0\\sharpcompress.0.23.0.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\3.1.22\\microsoft.netcore.app.runtime.win-x86.3.1.22.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.22\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.22.nupkg.sha512",
+    "C:\\Users\\poshe\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.22\\microsoft.aspnetcore.app.runtime.win-x86.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}

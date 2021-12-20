@@ -1,0 +1,2 @@
+\\Raspberrypi\nas\LCO pickem\Bulid\LCOpickem.pdb
+\\Raspberrypi\nas\LCO pickem\Bulid\LCOpickem.exe
